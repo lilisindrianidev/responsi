@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  #mysql
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: respon
+      MYSQL_USER : root
+      MYSQL_PASSWORD:
+  adminer:
+    image: responsi
+    restart : always
+    ports:
+      -3066:3066
+
+
