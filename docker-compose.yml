@@ -10,6 +10,12 @@ services:
     volumes: 
       - ./code:/code
       - ./site.conf:/etc/nginx/conf.d/site.conf
+    links:
+          - php
+  php:
+    image: php:7-fpm
+    volumes:
+        - ./code:/code
 
   db:
     image: mysql
