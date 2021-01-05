@@ -2,7 +2,7 @@ version: '3.7'
 services:
   #mysql
   app:
-    image: app:latest
+    image: responsi:latest
     command: start
     ports:
       - 8000:8000
