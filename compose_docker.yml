@@ -14,6 +14,6 @@ services:
     image: responsi
     restart : always
     ports:
-      -3066:3066
+      -80:80
 
 
