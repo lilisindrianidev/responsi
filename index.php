@@ -5,6 +5,7 @@
     $p_cart     = './App/View/Cart.php';
     $p_checkout = './App/View/Checkout.php';
     $p_invoice  = './App/View/Invoice.php';
+    
 ?>
 <!DOCTYPE html>
 <html>

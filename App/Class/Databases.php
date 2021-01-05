@@ -8,10 +8,10 @@
          */
         public static function PDO()
         {
-            $server         = '<db server>';
-            $username       = '<db username>';
-            $password       = '<db user pass';
-            $dbname         = '<db imersku>';
+            $server         = 'localhost:3306';
+            $username       = 'root';
+            $password       = '';
+            $dbname         = 'respon';
 
             try 
             {
