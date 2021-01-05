@@ -1,4 +1,3 @@
 FROM php:7.4-cli
-COPY . /usr/src/responsi
-WORKDIR /usr/src/responsi
+WORKDIR ./
 CMD ["php", "./index.php"]
