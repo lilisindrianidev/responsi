@@ -11,7 +11,6 @@ services:
       MYSQL_USER : root
       MYSQL_PASSWORD:
 
-    volumes: - ./init:/respon.d
   adminer:
     image: responsi
     restart : always
