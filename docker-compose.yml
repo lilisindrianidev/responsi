@@ -10,42 +10,11 @@ services:
       MYSQL_DATABASE: respon
       MYSQL_USER : root
       MYSQL_PASSWORD:
-    ports:
-    - 8181:8181
   adminer:
     image: responsi
     restart : always
     ports:
-      - 8181:8181
+      -3306:3306
+        
 
-#   web:
-#     image: lilis:latest
-#     container_name: responsi
-  
-    
-#     volumes:
-#       - ./responsi:/var/www/html
-#       - ./nginx:/etc/conf.d/
-#     ports:
-#       - "8080:80"
-#  # Php-fpm configuration
-#   php:
-#     image: php:7.2-fpm
-#     volumes:
-#       - .responsi:/var/www/html
-#  # Mysql configuration
-#   db:
-#     image: mysql:5.7
-#     container_name: lilis
-#     restart: always
-#     environment:
-#         - MYSQL_DATABASE=docker_demo
-#         - MYSQL_ROOT_PASSWORD=root123
-#         - MYSQL_USER=root
-#         - MYSQL_PASSWORD=root123
-#     ports:
-#         - "3306:3306"
-#     volumes:
-#         - /dbdata:/var/lib/mysql
-#   volumes:
-#   Dbdata:
+
