@@ -29,10 +29,10 @@ services:
     ports:
       - 3306:3306
 
-  # adminer:
-  #   image: responsi:latest
-  #   restart : always
-  #   ports:
-  #     - 8181:8181
+  adminer:
+    image: responsi:latest
+    restart : always
+    ports:
+      - 8181:8181
         
 
