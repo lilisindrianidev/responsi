@@ -20,9 +20,7 @@
   web:
     image: lilis:latest
     container_name: responsi
-    depends_on:
-      - docker-mysql
-      - php
+  
     links:
       - docker-mysql
       - php
