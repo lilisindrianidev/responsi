@@ -21,9 +21,7 @@
     image: lilis:latest
     container_name: responsi
   
-    links:
-      - docker-mysql
-      - php
+    
     volumes:
       - ./responsi:/var/www/html
       - ./nginx:/etc/conf.d/
