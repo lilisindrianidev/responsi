@@ -3,19 +3,19 @@ services:
   #mysql
   web:
     image: responsi:latest
+    build:
+      context: ./
     command: start
     restart : always
     ports:
       - 8080:80
     volumes: 
-      - ./code:/code
-      - ./site.conf:/etc/nginx/conf.d/site.conf
-    links:
-          - php
-  php:
-    image: php:7-fpm
-    volumes:
-        - ./code:/code
+      - ./:/app
+      # - ./site.conf:/etc/nginx/conf.d/site.conf
+    # links:
+    #       - php
+    working_dir: /app
+ 
 
   db:
     image: mysql
@@ -25,7 +25,9 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: respon
       MYSQL_USER : root
-      MYSQL_PASSWORD:
+      MYSQL_PASSWORD: hello
+    volumes: 
+      - .:/code:/code
     ports:
       - 3306:3306
 
