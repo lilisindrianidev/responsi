@@ -8,7 +8,7 @@
          */
         public static function PDO()
         {
-            $server         = 'localhost:3306';
+            $server         = 'localhost:';
             $username       = 'root';
             $password       = '';
             $dbname         = 'respon';
