@@ -18,7 +18,7 @@
         
 
 web:
-    image: lilis: latest
+    image: lilis:latest
     container_name: responsi
     depends_on:
       - docker-mysql
