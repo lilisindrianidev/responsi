@@ -1,50 +1,50 @@
-# version: '3.7'
-# services:
-#   #mysql
-#   db:
-#     image: mysql
-#     command: --default-authentication-plugin=mysql_native_password
-#     restart: always
-#     environment:
-#       MYSQL_ROOT_PASSWORD: root
-#       MYSQL_DATABASE: respon
-#       MYSQL_USER : root
-#       MYSQL_PASSWORD:
-#   adminer:
-#     image: responsi
-#     restart : always
-#     ports:
-#       - 8181:8181
-        
 
-  web:
-    image: lilis:latest
-    container_name: responsi
-  
-    
-    volumes:
-      - ./responsi:/var/www/html
-      - ./nginx:/etc/conf.d/
-    ports:
-      - "8080:80"
- # Php-fpm configuration
-  php:
-    image: php:7.2-fpm
-    volumes:
-      - .responsi:/var/www/html
- # Mysql configuration
+        version: '3.7'
+services:
+  #mysql
   db:
-    image: mysql:5.7
-    container_name: lilis
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-        - MYSQL_DATABASE=docker_demo
-        - MYSQL_ROOT_PASSWORD=root123
-        - MYSQL_USER=root
-        - MYSQL_PASSWORD=root123
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: respon
+      MYSQL_USER : root
+      MYSQL_PASSWORD:
+  adminer:
+    image: responsi
+    restart : always
     ports:
-        - "3306:3306"
-    volumes:
-        - /dbdata:/var/lib/mysql
-  volumes:
-  Dbdata:
+      - 8181:8181
+
+#   web:
+#     image: lilis:latest
+#     container_name: responsi
+  
+    
+#     volumes:
+#       - ./responsi:/var/www/html
+#       - ./nginx:/etc/conf.d/
+#     ports:
+#       - "8080:80"
+#  # Php-fpm configuration
+#   php:
+#     image: php:7.2-fpm
+#     volumes:
+#       - .responsi:/var/www/html
+#  # Mysql configuration
+#   db:
+#     image: mysql:5.7
+#     container_name: lilis
+#     restart: always
+#     environment:
+#         - MYSQL_DATABASE=docker_demo
+#         - MYSQL_ROOT_PASSWORD=root123
+#         - MYSQL_USER=root
+#         - MYSQL_PASSWORD=root123
+#     ports:
+#         - "3306:3306"
+#     volumes:
+#         - /dbdata:/var/lib/mysql
+#   volumes:
+#   Dbdata:
